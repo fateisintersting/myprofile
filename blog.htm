@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Project Dropdowns</title>
+    <style>
+        .project-details {
+            display: none; /* Initially hide the project details */
+            margin-top: 10px;
+        }
+
+        .project-name {
+            cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+            color: #007BFF; /* Optional: color for the project name */
+            font-weight: bold; /* Optional: make the project name bold */
+        }
+    </style>
+</head>
+<body>
+
+<div class="p1">
+    <div class="project-name" onclick="toggleDetails('project1')">Blog Website</div>
+    <div id="project1" class="project-details">
+        <h3>Objective of the Project</h3>
+        <p>The primary objective of this project was to create a dynamic and responsive blog platform where users can create, edit, and delete blog posts. The website includes user authentication and authorization features, allowing registered users to manage their own content securely.</p>
+
+        <h4>Skills Learned</h4>
+        <ul>
+            <li>Full-stack development using Node.js</li>
+            <li>Express.js for server-side routing and middleware management</li>
+            <li>MongoDB for database management</li>
+            <li>User authentication and session management</li>
+            <li>RESTful API design and implementation</li>
+        </ul>
+
+        <h4>Tools Used</h4>
+        <ul>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MongoDB</li>
+            <li>Mongoose (for MongoDB object modeling)</li>
+            <li>EJS (Embedded JavaScript templating)</li>
+            <li>Passport.js (for user authentication)</li>
+            <li>Git & GitHub (for version control)</li>
+        </ul>
+
+        <h4>Steps to Build the Project</h4>
+        <ol>
+            <li>Set up the Node.js environment and initialize the project using npm.</li>
+            <li>Install and configure Express.js for handling server-side routing.</li>
+            <li>Design the database schema using MongoDB and Mongoose.</li>
+            <li>Implement user authentication using Passport.js, including registration and login features.</li>
+            <li>Create routes for CRUD operations on blog posts (Create, Read, Update, Delete).</li>
+            <li>Build the front-end using EJS to render dynamic content based on user actions.</li>
+            <li>Test the application thoroughly for security vulnerabilities and ensure smooth user experience.</li>
+            <li>Deploy the application to a cloud platform such as Heroku or AWS.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="p1">
+    <div class="project-name" onclick="toggleDetails('project2')">E-commerce Website</div>
+    <div id="project2" class="project-details">
+        <h3>Objective of the Project</h3>
+        <p>The objective was to build a comprehensive e-commerce platform with product listings, a shopping cart, and secure payment processing.</p>
+
+        <h4>Skills Learned</h4>
+        <ul>
+            <li>Frontend development with HTML, CSS, and JavaScript</li>
+            <li>Backend development using Node.js and Express.js</li>
+            <li>Database design and management with MongoDB</li>
+            <li>Payment gateway integration</li>
+        </ul>
+
+        <h4>Tools Used</h4>
+        <ul>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MongoDB</li>
+            <li>Stripe API (for payments)</li>
+            <li>Git & GitHub</li>
+        </ul>
+
+        <h4>Steps to Build the Project</h4>
+        <ol>
+            <li>Set up the Node.js environment and initialize the project using npm.</li>
+            <li>Build the frontend using HTML, CSS, and JavaScript.</li>
+            <li>Develop the backend API using Express.js to handle product listings, shopping cart operations, and payment processing.</li>
+            <li>Integrate the Stripe API for secure payment transactions.</li>
+            <li>Test the entire application for usability and security.</li>
+            <li>Deploy the application to a cloud platform such as Heroku or AWS.</li>
+        </ol>
+    </div>
+</div>
+
+<script>
+    function toggleDetails(projectId) {
+        const details = document.getElementById(projectId);
+        if (details.style.display === "none" || details.style.display === "") {
+            details.style.display = "block"; // Show the details
+        } else {
+            details.style.display = "none"; // Hide the details
+        }
+    }
+</script>
+
+</body>
+</html>
